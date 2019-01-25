@@ -7,7 +7,9 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import static View.MainFrame.APPLICATION_HEIGHT;
@@ -16,19 +18,14 @@ import static View.MainFrame.APPLICATION_WIDTH;
 public class WelcomePanel extends JPanel {
     public final static int WELCOME_PANEL_WIDTH = APPLICATION_WIDTH;
     public final static int WELCOME_PANEL_HEIGHT = APPLICATION_HEIGHT;
+    public static BufferedWriter resultsWriter;
 
     private MainFrame properMainFrame;
 
 
     public WelcomePanel(MainFrame properMainFrame){
         this.properMainFrame = properMainFrame;
-        BufferedImage myPicture = null;
-        try {
-            myPicture = ImageIO.read(this.getClass().getResource("FootballTestStart.jpg"));
-        } catch (IOException e) {
-            System.out.println("Can't get to welcome panel picture");
-        }
-        ImageIcon imageIcon = new ImageIcon(myPicture) ;
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource("FootBallTestStart.jpg"));
         JLabel picLabel = new JLabel(imageIcon);
         picLabel.setIcon(imageIcon);
         picLabel.setPreferredSize(new Dimension(WELCOME_PANEL_WIDTH,WELCOME_PANEL_HEIGHT));
@@ -39,6 +36,6 @@ public class WelcomePanel extends JPanel {
         add(welcomeButton, BorderLayout.SOUTH);
         setBackground(Color.white);
 
-        //setPreferredSize(new Dimension(WELCOME_PANEL_WIDTH,WELCOME_PANEL_HEIGHT));
+
     }
 }

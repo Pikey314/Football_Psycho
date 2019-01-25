@@ -11,8 +11,12 @@ import static View.MainFrame.APPLICATION_WIDTH;
 
 public class LoginPanel extends JPanel {
 
+
+
     public final static int LOGIN_PANEL_WIDTH = APPLICATION_WIDTH;
     public final static int LOGIN_PANEL_HEIGHT = APPLICATION_HEIGHT;
+    public static String date;
+    public static String personalNumber;
     private MainFrame properMainFrame;
 
 
@@ -30,7 +34,7 @@ public class LoginPanel extends JPanel {
         date.setHorizontalAlignment(JTextField.CENTER);
         personalNumber.setFont(new Font("Arial", Font.ITALIC, 20));
         date.setFont(new Font("Arial", Font.ITALIC, 20));
-        JButton showInstructionButton = new ShowInstructionButton(this.properMainFrame);
+        JButton showInstructionButton = new ShowInstructionButton(this.properMainFrame, personalNumber, date);
         //JButton register = new RegisterUserButton(this.properMainFrame, "Sign up",false);
         setLayout(new GridLayout(7,1));
         add(textLabel);

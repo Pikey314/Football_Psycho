@@ -13,20 +13,15 @@ public class GameLabel extends JLabel {
 
     ImageIcon grassIcon;
     ImageIcon ballIcon;
+    ImageIcon badHitIcon;
     private boolean ball;
 
     public GameLabel (boolean ball) {
         this.ball = ball;
-        BufferedImage grassPicture = null;
-        BufferedImage ballPicture = null;
-        try {
-            grassPicture = ImageIO.read(this.getClass().getResource("grass.jpg"));
-            ballPicture = ImageIO.read(this.getClass().getResource("ball.jpg"));
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
-        this.grassIcon = new ImageIcon(grassPicture);
-        this.ballIcon = new ImageIcon(ballPicture);
+        this.grassIcon = new ImageIcon(getClass().getClassLoader().getResource("grass.jpg"));
+        this.ballIcon = new ImageIcon(getClass().getClassLoader().getResource("ball.jpg"));
+        this.badHitIcon = new ImageIcon(getClass().getClassLoader().getResource("badHit.jpg"));
+
 
         if (ball)
             setIcon(ballIcon);
@@ -46,6 +41,10 @@ public class GameLabel extends JLabel {
             this.ball = true;
         }
 
+    }
+
+    public void setBadHitLabel(){
+        setIcon(badHitIcon);
     }
 
     public boolean isBallThere(){

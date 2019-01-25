@@ -26,20 +26,20 @@ public class GamePanel extends JPanel {
         this.properMainFrame = properMainFrame;
         setPreferredSize(new Dimension(APPLICATION_WIDTH, APPLICATION_HEIGHT));
         setLayout(new BorderLayout());
-
-        JPanel infoPanel = new JPanel();
+        /*JPanel infoPanel = new JPanel();
         infoPanel.setBackground(Color.green);
-        infoPanel.setPreferredSize(new Dimension(APPLICATION_WIDTH,APPLICATION_HEIGHT/8));
+        infoPanel.setPreferredSize(new Dimension(APPLICATION_WIDTH,APPLICATION_HEIGHT/8));*/
 
         JLabel rightLabel = new GameLabel(false);
         JLabel leftLabel = new GameLabel(true);
 
-        JButton arrowsButton = new JButton("");
-        arrowsButton.setBackground(Color.blue);
+        JButton arrowsButton = new JButton("Click once to start the game");
+        arrowsButton.setPreferredSize(new Dimension(APPLICATION_WIDTH, APPLICATION_HEIGHT/8));
+        arrowsButton.setBackground(Color.yellow);
 
         add(rightLabel,BorderLayout.EAST);
         add(leftLabel,BorderLayout.WEST);
-        add(infoPanel,BorderLayout.NORTH);
+        //add(infoPanel,BorderLayout.NORTH);
         add(arrowsButton,BorderLayout.SOUTH);
 
 
