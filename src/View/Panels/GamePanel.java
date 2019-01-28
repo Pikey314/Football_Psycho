@@ -32,13 +32,17 @@ public class GamePanel extends JPanel {
 
         JLabel rightLabel = new GameLabel(false);
         JLabel leftLabel = new GameLabel(true);
+        JLabel middleLabel = new JLabel();
+        middleLabel.setIcon(new ImageIcon(getClass().getClassLoader().getResource("middle.jpg")));
 
-        JButton arrowsButton = new JButton("Click once to start the game");
+        JButton arrowsButton = new JButton("Game will start after clicking here");
+        arrowsButton.setFont(new Font("Arial", Font.BOLD, 20));
         arrowsButton.setPreferredSize(new Dimension(APPLICATION_WIDTH, APPLICATION_HEIGHT/8));
-        arrowsButton.setBackground(Color.yellow);
+        //arrowsButton.setBackground(Color.yellow);
 
         add(rightLabel,BorderLayout.EAST);
         add(leftLabel,BorderLayout.WEST);
+        add(middleLabel,BorderLayout.CENTER);
         //add(infoPanel,BorderLayout.NORTH);
         add(arrowsButton,BorderLayout.SOUTH);
 

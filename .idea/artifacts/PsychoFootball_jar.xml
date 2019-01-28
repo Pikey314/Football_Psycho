@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PsychoFootball:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PsychoFootball_jar</output-path>
+    <root id="archive" name="PsychoFootball.jar">
+      <element id="module-output" name="PsychoFootball" />
+    </root>
+  </artifact>
+</component>

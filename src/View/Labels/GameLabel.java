@@ -14,6 +14,8 @@ public class GameLabel extends JLabel {
     ImageIcon grassIcon;
     ImageIcon ballIcon;
     ImageIcon badHitIcon;
+    ImageIcon goodHitIcon;
+
     private boolean ball;
 
     public GameLabel (boolean ball) {
@@ -21,13 +23,14 @@ public class GameLabel extends JLabel {
         this.grassIcon = new ImageIcon(getClass().getClassLoader().getResource("grass.jpg"));
         this.ballIcon = new ImageIcon(getClass().getClassLoader().getResource("ball.jpg"));
         this.badHitIcon = new ImageIcon(getClass().getClassLoader().getResource("badHit.jpg"));
+        this.goodHitIcon = new ImageIcon(getClass().getClassLoader().getResource("goodHit.jpg"));
 
 
         if (ball)
             setIcon(ballIcon);
         else
             setIcon(grassIcon);
-        setPreferredSize(new Dimension(APPLICATION_WIDTH/2,APPLICATION_HEIGHT));
+        setPreferredSize(new Dimension(APPLICATION_WIDTH/2-50,APPLICATION_HEIGHT));
 
     }
 
@@ -45,6 +48,9 @@ public class GameLabel extends JLabel {
 
     public void setBadHitLabel(){
         setIcon(badHitIcon);
+    }
+    public void setGoodHitIcon(){
+        setIcon(goodHitIcon);
     }
 
     public boolean isBallThere(){

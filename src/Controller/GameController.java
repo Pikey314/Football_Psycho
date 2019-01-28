@@ -70,6 +70,7 @@ public class GameController implements KeyListener {
 
                         if (this.goodHitTimeInSec <= 3) {
                             System.out.println(attemptNumber + " GOOD - Reaction time: " + this.goodHitTimeInSec + " (ball on the left side)");
+                            this.leftLabel.setGoodHitIcon();
                             totalGoodLeft++;
                             totalGOOD++;
                             try {
@@ -146,6 +147,7 @@ public class GameController implements KeyListener {
 
                         if (this.goodHitTimeInSec <= 3) {
                             System.out.println(attemptNumber + " GOOD - Reaction time: " + this.goodHitTimeInSec + " (ball on the right side)");
+                            this.rightLabel.setGoodHitIcon();
                             totalGoodRight++;
                             totalGOOD++;
                             try {

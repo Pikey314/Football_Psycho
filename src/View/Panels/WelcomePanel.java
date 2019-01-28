@@ -25,7 +25,7 @@ public class WelcomePanel extends JPanel {
 
     public WelcomePanel(MainFrame properMainFrame){
         this.properMainFrame = properMainFrame;
-        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource("FootBallTestStart.jpg"));
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource("FootballTestStart.jpg"));
         JLabel picLabel = new JLabel(imageIcon);
         picLabel.setIcon(imageIcon);
         picLabel.setPreferredSize(new Dimension(WELCOME_PANEL_WIDTH,WELCOME_PANEL_HEIGHT));

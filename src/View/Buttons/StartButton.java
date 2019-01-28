@@ -18,7 +18,7 @@ public class StartButton extends JButton {
         super();
         this.properMainFrame = properMainFrame;
         setText("Press here to start");
-        setBackground(Color.white);
+        setForeground(Color.darkGray);
         setFont(new Font("Arial", Font.BOLD, 40));
         setPreferredSize(new Dimension(WELCOME_PANEL_WIDTH,WELCOME_PANEL_HEIGHT/8));
         StartButtonController sbc = new StartButtonController(this.properMainFrame);

@@ -25,8 +25,7 @@ public class LoginPanel extends JPanel {
         setPreferredSize(new Dimension(LOGIN_PANEL_WIDTH, LOGIN_PANEL_HEIGHT));
         JTextField personalNumber = new JTextField("input personal number here");
         JTextField date = new JTextField("input date here");
-        //sprawdź czy string zawiera /// i same cyfry i czy miesiące się zgadzaja
-        JLabel textLabel = new JLabel("Please provide personal data below",SwingConstants.CENTER);
+        JLabel textLabel = new JLabel("Please provide game data below",SwingConstants.CENTER);
         textLabel.setFont(new Font("Arial", Font.BOLD, 30));
         personalNumber.setPreferredSize(new Dimension(LOGIN_PANEL_WIDTH/2, LOGIN_PANEL_HEIGHT/20));
         date.setPreferredSize(new Dimension(LOGIN_PANEL_WIDTH/2, LOGIN_PANEL_HEIGHT/20));

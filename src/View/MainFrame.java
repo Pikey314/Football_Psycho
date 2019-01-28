@@ -29,7 +29,7 @@ public class MainFrame extends JFrame {
         //add(bottomNavigationPanel,BorderLayout.SOUTH);
         JPanel welcomePanel = new WelcomePanel(this);
         add(welcomePanel,BorderLayout.CENTER);
-
+        setResizable(false);
     }
 
     public void setNewPanel(JPanel panel){
